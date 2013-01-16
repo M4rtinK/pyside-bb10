@@ -7014,15 +7014,6 @@
     <modify-function signature="print()" rename="print_" />
   </object-type>
 
-  <object-type name="QSessionManager">
-    <extra-includes>
-    </extra-includes>
-    <enum-type name="RestartHint"/>
-    <!-- ### "handle()const" is an internal method. -->
-    <modify-function signature="handle()const" remove="all"/>
-    <!-- ### -->
-  </object-type>
-
   <object-type name="QSizeGrip"/>
 
   <object-type name="QSystemTrayIcon">
