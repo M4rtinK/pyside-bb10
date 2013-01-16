@@ -7016,16 +7016,6 @@
 
   <object-type name="QSizeGrip"/>
 
-  <object-type name="QSystemTrayIcon">
-    <enum-type name="ActivationReason"/>
-    <enum-type name="MessageIcon"/>
-    <modify-function signature="setContextMenu(QMenu*)">
-      <modify-argument index="1">
-        <reference-count action="set"/>
-      </modify-argument>
-    </modify-function>
-  </object-type>
-
   <!-- The above entries may be present in the system or not. Keep this section organized. -->
 
   <!-- This enum is present on QtCore -->
