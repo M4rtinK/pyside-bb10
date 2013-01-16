@@ -69,12 +69,12 @@ endif()
 
 set(QtGui_OPTIONAL_SRC )
 set(QtGui_DROPPED_ENTRIES )
-check_qt_class(QtGui QAbstractPageSetupDialog   QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
-check_qt_class(QtGui QAbstractPrintDialog       QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
-check_qt_class(QtGui QPageSetupDialog           QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
-check_qt_class(QtGui QPrintPreviewDialog        QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
-check_qt_class(QtGui QPrintPreviewWidget        QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
-check_qt_class(QtGui QSizeGrip                  QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
+#check_qt_class(QtGui QAbstractPageSetupDialog   QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
+#check_qt_class(QtGui QAbstractPrintDialog       QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
+#check_qt_class(QtGui QPageSetupDialog           QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
+#check_qt_class(QtGui QPrintPreviewDialog        QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
+#check_qt_class(QtGui QPrintPreviewWidget        QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
+#check_qt_class(QtGui QSizeGrip                  QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
 
 qt4_wrap_cpp(QPYTEXTOBJECT_MOC "${pyside_SOURCE_DIR}/qpytextobject.h")
 
