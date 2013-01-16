@@ -27,17 +27,7 @@
   <rejection class="QPrintDialog"/>
   <rejection class="QPrintPreviewDialog"/>
   <rejection class="QPrintPreviewWidget"/>
-  <rejection class="QPrinter"/>
 
-  <object-type name="QPlainTextEdit">
-    <modify-function signature="print(QPrinter*)const" remove="all"/>
-  </object-type>
-  <object-type name="QTextDocument">
-    <modify-function signature="print(QPrinter*)const" remove="all"/>
-  </object-type>
-  <object-type name="QTextEdit">
-    <modify-function signature="print(QPrinter*)const" remove="all"/>
-  </object-type>
 
   <!-- Qt::HANDLE is typedef to "void *", which gives compilation errors on
        conversion templates -->

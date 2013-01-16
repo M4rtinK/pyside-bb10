@@ -1,5 +1,5 @@
 import unittest
-from PySide.QtGui import QLayout, QWidget, QGraphicsLayout, QGraphicsLayoutItem, QTextCursor, QPrinter
+from PySide.QtGui import QLayout, QWidget, QGraphicsLayout, QGraphicsLayoutItem, QTextCursor
 
 from helper import UsesQApplication
 

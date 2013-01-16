@@ -5036,7 +5036,6 @@
         <parent index="this" action="add"/>
       </modify-argument>
     </modify-function>
-    <modify-function signature="print(QPrinter*)const" rename="print_" />
   </object-type>
   <object-type name="QSplitter">
     <modify-function signature="getRange(int,int*,int*)const">
@@ -5410,7 +5409,6 @@
         <parent index="this" action="add"/>
       </modify-argument>
     </modify-function>
-    <modify-function signature="print(QPrinter*) const" rename="print_"/>
   </object-type>
   <object-type name="QAction">
     <enum-type name="ActionEvent"/>
@@ -6095,7 +6093,6 @@
         <parent index="this" action="add"/>
       </modify-argument>
     </modify-function>
-    <modify-function signature="print(QPrinter*)const" rename="print_" />
   </object-type>
   <object-type name="QStyledItemDelegate">
     <modify-function signature="setItemEditorFactory(QItemEditorFactory*)">
@@ -7008,46 +7005,6 @@
 
   <object-type name="QPrintDialog">
     <modify-function signature="exec()" rename="exec_" allow-thread="yes" />
-  </object-type>
-  <rejection class="QPrinter" function-name="printerSelectionOption"/>
-  <rejection class="QPrinter" function-name="setPrinterSelectionOption"/>
-
-  <object-type name="QPrinter" >
-    <enum-type name="ColorMode"/>
-    <enum-type name="DuplexMode"/>
-    <enum-type name="Orientation"/>
-    <enum-type name="OutputFormat"/>
-    <enum-type name="PageOrder"/>
-    <enum-type name="PageSize" />
-    <enum-type name="PaperSource"/>
-    <enum-type name="PrintRange"/>
-    <enum-type name="PrinterMode"/>
-    <enum-type name="PrinterState"/>
-    <enum-type name="Unit"/>
-    <modify-function signature="getPageMargins(qreal*,qreal*,qreal*,qreal*,QPrinter::Unit)const">
-        <modify-argument index="0">
-            <replace-type modified-type="PyObject" />
-        </modify-argument>
-        <modify-argument index="1">
-            <remove-argument/>
-        </modify-argument>
-        <modify-argument index="2">
-            <remove-argument/>
-        </modify-argument>
-        <modify-argument index="3">
-            <remove-argument/>
-        </modify-argument>
-        <modify-argument index="4">
-            <remove-argument/>
-        </modify-argument>
-        <inject-code class="target" position="beginning">
-            <insert-template name="fix_number*,number*,number*,number*,args">
-                <replace from="$TYPE" to="qreal" />
-            </insert-template>
-        </inject-code>
-    </modify-function>
-    <extra-includes>
-    </extra-includes>
   </object-type>
 
   <object-type name="QPrintPreviewDialog"/>
