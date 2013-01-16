@@ -24,7 +24,6 @@
   <rejection class="QAbstractPageSetupDialog"/>
   <rejection class="QAbstractPrintDialog"/>
   <rejection class="QPageSetupDialog"/>
-  <rejection class="QPrintDialog"/>
   <rejection class="QPrintPreviewDialog"/>
   <rejection class="QPrintPreviewWidget"/>
 
