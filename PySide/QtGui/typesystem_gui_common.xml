@@ -2584,7 +2584,7 @@
       </inject-code>
     </add-function>
   </object-type>
-  <object-type name="QSound"/>
+  <!--object-type name="QSound"/-->
   <object-type name="QSpacerItem"/>
   <object-type name="QStandardItem">
     <enum-type name="ItemType"/>
@@ -7009,10 +7009,6 @@
   <object-type name="QPrintDialog">
     <modify-function signature="exec()" rename="exec_" allow-thread="yes" />
   </object-type>
-  <object-type name="QPrintEngine">
-    <enum-type name="PrintEnginePropertyKey" />
-  </object-type>
-  <value-type name="QPrinterInfo" />
   <rejection class="QPrinter" function-name="printerSelectionOption"/>
   <rejection class="QPrinter" function-name="setPrinterSelectionOption"/>
 
@@ -7050,16 +7046,7 @@
             </insert-template>
         </inject-code>
     </modify-function>
-    <modify-function signature="setEngines(QPrintEngine*,QPaintEngine*)">
-      <modify-argument index="1">
-        <parent index="this" action="add"/>
-      </modify-argument>
-      <modify-argument index="2">
-        <parent index="this" action="add"/>
-      </modify-argument>
-    </modify-function>
     <extra-includes>
-      <include file-name="QPrinterInfo" location="global"/>
     </extra-includes>
   </object-type>
 

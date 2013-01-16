@@ -74,11 +74,8 @@ check_qt_class(QtGui QAbstractPrintDialog       QtGui_OPTIONAL_SRC QtGui_DROPPED
 check_qt_class(QtGui QGtkStyle                  QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
 check_qt_class(QtGui QPageSetupDialog           QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
 check_qt_class(QtGui QPrintDialog               QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
-check_qt_class(QtGui QPrintEngine               QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
 check_qt_class(QtGui QPrintPreviewDialog        QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
 check_qt_class(QtGui QPrintPreviewWidget        QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
-check_qt_class(QtGui QPrinter                   QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
-check_qt_class(QtGui QPrinterInfo               QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
 check_qt_class(QtGui QSessionManager            QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
 check_qt_class(QtGui QSizeGrip                  QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
 check_qt_class(QtGui QSystemTrayIcon            QtGui_OPTIONAL_SRC QtGui_DROPPED_ENTRIES)
@@ -275,7 +272,6 @@ ${CMAKE_CURRENT_BINARY_DIR}/PySide/QtGui/qshowevent_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/PySide/QtGui/qsizepolicy_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/PySide/QtGui/qslider_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/PySide/QtGui/qsortfilterproxymodel_wrapper.cpp
-${CMAKE_CURRENT_BINARY_DIR}/PySide/QtGui/qsound_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/PySide/QtGui/qspaceritem_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/PySide/QtGui/qspinbox_wrapper.cpp
 ${CMAKE_CURRENT_BINARY_DIR}/PySide/QtGui/qsplashscreen_wrapper.cpp

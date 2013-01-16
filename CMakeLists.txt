@@ -20,7 +20,7 @@ if(USE_XVFB)
     endif()
 endif()
 
-option(BUILD_TESTS "Build tests." TRUE)
+option(BUILD_TESTS "Build tests." FALSE)
 option(ENABLE_VERSION_SUFFIX "Used to use current version in suffix to generated files. This is used to allow multiples versions installed simultaneous." FALSE)
 set(LIB_SUFFIX "" CACHE STRING "Define suffix of directory name (32/64)" )
 set(LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}" CACHE PATH "The subdirectory relative to the install prefix where libraries will be installed (default is /lib${LIB_SUFFIX})" FORCE)
@@ -105,7 +105,8 @@ elseif(Q_WS_SIMULATOR)
     set(ENABLE_SIMULATOR "1")
     set(AUTO_OS "simulator")
 else()
-    message(FATAL_ERROR "OS not supported")
+    set(AUTO_OS "qnx")
+#     message(FATAL_ERROR "OS not supported")
 endif()
 message(STATUS "Detected OS: ${AUTO_OS}")
 
@@ -140,7 +141,7 @@ add_custom_target(dist
 
 if (NOT SITE_PACKAGE)
     execute_process(
-        COMMAND ${SHIBOKEN_PYTHON_INTERPRETER} -c "from distutils import sysconfig; \\
+        COMMAND python3 -c "from distutils import sysconfig; \\
             print(sysconfig.get_python_lib(1,0,prefix='${CMAKE_INSTALL_PREFIX}'))"
         OUTPUT_VARIABLE SITE_PACKAGE
         OUTPUT_STRIP_TRAILING_WHITESPACE)
@@ -171,9 +172,9 @@ if (BUILD_TESTS)
     add_subdirectory(tests)
 endif ()
 
-find_program(DOT_EXEC dot)
-if (QT_SRC_DIR AND DOT_EXEC)
-    add_subdirectory(doc)
-else ()
-    message(STATUS "QT_SRC_DIR variable not set or graphviz not found, apidoc generation targets disabled.")
-endif()
+# find_program(DOT_EXEC dot)
+# if (QT_SRC_DIR AND DOT_EXEC)
+#     add_subdirectory(doc)
+# else ()
+#     message(STATUS "QT_SRC_DIR variable not set or graphviz not found, apidoc generation targets disabled.")
+# endif()

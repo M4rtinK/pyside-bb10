@@ -27,8 +27,6 @@
   <rejection class="QPrintDialog"/>
   <rejection class="QPrintPreviewDialog"/>
   <rejection class="QPrintPreviewWidget"/>
-  <rejection class="QPrintEngine"/>
-  <rejection class="QPrinterInfo"/>
   <rejection class="QPrinter"/>
 
   <object-type name="QPlainTextEdit">
