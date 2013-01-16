@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
     This file is part of PySide project.
-    Copyright (C) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+    Copyright (C) 2011 Nokia Corporation and/or its subsidiary(-ies).
     Contact: PySide team <contact@pyside.org>
 
     This library is free software; you can redistribute it and/or
@@ -18,20 +18,9 @@
     License along with this library; if not, write to the Free Software
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 -->
-<typesystem package="PySide.QtGui">
-
-  <!-- try to get rid of "symbol not found in QtCore.so errors in BB10 -->
-  <rejection class="QAbstractPageSetupDialog"/>
-  <rejection class="QAbstractPrintDialog"/>
-  <rejection class="QPageSetupDialog"/>
-  <rejection class="QPrintPreviewDialog"/>
-  <rejection class="QPrintPreviewWidget"/>
-  <rejection class="QSizeGrip"/>
-
-  <!-- Qt::HANDLE is typedef to "void *", which gives compilation errors on
-       conversion templates -->
-  <value-type name="QCursor">
-    <modify-function signature="QCursor(Qt::HANDLE)" remove="all"/>
-  </value-type>
-  <rejection class="QSound"/>
+<typesystem package="PySide.QtCore">
+  <primitive-type name="Qt::HANDLE" target-lang-api-name="PyLong">
+    <!-- FIXME APIExtractor or shiboken do not support multiple includes by primitive type -->
+    <include file-name="QTextDocument" location="global"/>
+  </primitive-type>
 </typesystem>
